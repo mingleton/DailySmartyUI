@@ -3,7 +3,7 @@ import Logo from "./logo";
 import SearchBar from "./searchbar.js";
 import RecentPosts from "./reacentPosts.js"
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div className='app'>
