@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from "./logo";
-import SearchBar from "./searchbar.js";
-import RecentPosts from "./reacentPosts.js"
+import SearchBar from "./searchbar";
+import RecentPosts from "./recentPosts"
 
 import { connect } from 'react-redux';
 import * as actions from "../actions";
@@ -10,8 +10,9 @@ class Home extends Component {
 
 
   handleSearchBarSubmit(query) {
-    this.props.fetchPostsWithQuery(query);
-    this.props.history.push('/results');
+    this.props.fetchPostsWithQuery(query, () => {
+      this.props.history.push('/results');
+    });
   }
 
   render() {
@@ -23,7 +24,7 @@ class Home extends Component {
           <RecentPosts/>
         </div>
       </div>
-    );
+    ); 
   } 
 }
 
