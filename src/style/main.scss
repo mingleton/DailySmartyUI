@@ -28,7 +28,14 @@ ul {
 
 
 
+
 $color-gray-one: #666666;
+
+.no-content {
+    color: $color-gray-one;
+    font-size: 14px;
+    line-height: 17px;
+}
 
 @import './mixins.scss';
 @import './searchbar';
