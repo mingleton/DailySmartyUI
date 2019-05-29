@@ -45,7 +45,12 @@
     input {
     height: 115px;
     font-size: 40px;
+    @media screen and (max-width: 600px) {
+        font-size: 23px;
+        height: 59px;
     }
+
+  }
 }
 
 .search-bar__results {
